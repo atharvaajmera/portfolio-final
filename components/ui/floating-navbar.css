@@ -1,0 +1,110 @@
+.floating-nav {
+  display: flex;
+  max-width: max-content;
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4),
+    0px 0px 0px 1px rgba(255, 255, 255, 0.05);
+  z-index: 5000;
+  padding: 0.75rem 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dark .floating-nav {
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.floating-nav-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.dark .floating-nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.floating-nav-link:hover {
+  color: #ffffff;
+}
+
+.dark .floating-nav-link:hover {
+  color: #ffffff;
+}
+
+.floating-nav-link .icon {
+  display: block;
+}
+
+.floating-nav-link .text {
+  display: none;
+  font-size: 0.875rem;
+  color: inherit;
+}
+
+@media (min-width: 640px) {
+  .floating-nav-link .icon {
+    display: none;
+  }
+
+  .floating-nav-link .text {
+    display: block;
+  }
+}
+
+.floating-nav-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: relative;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .floating-nav-button {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.floating-nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .floating-nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.floating-nav-button-gradient {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgb(59, 130, 246),
+    transparent
+  );
+}
