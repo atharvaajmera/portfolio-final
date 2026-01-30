@@ -4,7 +4,7 @@ import { HeroSection } from "./hero";
 
 export function BackgroundLinesDemo() {
   return (
-    <BackgroundLines className="flex items-center justify-center h-full w-full flex-col ">
+    <BackgroundLines className="flex items-center justify-center w-full flex-col min-h-screen">
       <HeroSection />
     </BackgroundLines>
   );

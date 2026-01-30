@@ -55,9 +55,9 @@ export default function Mailer() {
     if (isSent) {
         return (
             <div className="flex flex-col items-center justify-center w-full h-full min-h-[400px] bg-[#1a1a1a] border border-white/10 rounded-lg p-8 text-center animate-in fade-in zoom-in duration-500">
-                <CheckCircle2 className="w-16 h-16 text-teal-400 mb-4" />
+                <CheckCircle2 className="w-16 h-16 text-blue-500 mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-400 mb-6">
+                <p className="text-white mb-6">
                     Thanks for reaching out, {name}. I&apos;ll get back to you as soon as possible.
                 </p>
                 <button
@@ -78,7 +78,7 @@ export default function Mailer() {
             <div className="flex flex-col gap-2">
                 <label
                     htmlFor="name"
-                    className="text-sm font-medium text-gray-200"
+                    className="text-sm font-medium text-white"
                 >
                     Name
                 </label>
@@ -88,14 +88,14 @@ export default function Mailer() {
                     placeholder="Your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full p-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-200"
+                    className="w-full p-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/35 focus:shadow-lg focus:shadow-blue-500/20 focus:-translate-y-0.5 transition-all duration-200"
                 />
             </div>
 
             <div className="flex flex-col gap-2">
                 <label
                     htmlFor="email"
-                    className="text-sm font-medium text-gray-200"
+                    className="text-sm font-medium text-white"
                 >
                     Email
                 </label>
@@ -105,14 +105,14 @@ export default function Mailer() {
                     placeholder="your.email@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-200"
+                    className="w-full p-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/35 focus:shadow-lg focus:shadow-blue-500/20 focus:-translate-y-0.5 transition-all duration-200"
                 />
             </div>
 
             <div className="flex flex-col gap-2">
                 <label
                     htmlFor="message"
-                    className="text-sm font-medium text-gray-200"
+                    className="text-sm font-medium text-white"
                 >
                     Message
                 </label>
@@ -123,15 +123,15 @@ export default function Mailer() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={5}
-                    className="w-full p-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-200 resize-none min-h-[120px] font-sans"
+                    className="w-full p-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/35 focus:shadow-lg focus:shadow-blue-500/20 focus:-translate-y-0.5 transition-all duration-200 resize-none min-h-[120px] font-sans"
                 />
             </div>
 
             <button
                 type="submit"
-                className="w-full py-3 px-6 bg-teal-400 hover:bg-teal-300 text-black font-medium rounded-lg shadow-lg shadow-teal-500/20 transition-all duration-200 transform hover:scale-[1.02] mt-2"
+                className="w-full py-3.5 px-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg shadow-blue-500/35 hover:shadow-blue-500/50 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] mt-2"
             >
-                Send Message
+                Send it 🚀
             </button>
         </form>
     );

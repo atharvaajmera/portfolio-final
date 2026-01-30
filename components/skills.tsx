@@ -123,7 +123,7 @@ export default function Skills() {
   return (
     <div className="h-[40rem] rounded-md flex flex-col antialiased bg-[#050505] dark:bg-[#050505] dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-12 font-sans">
-        Tech <span className="text-teal-400">Skills</span>
+        Tech <span className="text-blue-500">Skills</span>
       </h1>
       <InfiniteMovingCards
         items={skills}

@@ -10,9 +10,9 @@ export default function Aboutme() {
       className="w-full max-w-[750px] mx-auto px-4"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-left">
-        About <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Me</span>
+        About <span className="text-blue-500">Me</span>
       </h2>
-      <div className="text-left text-gray-300 leading-relaxed space-y-4">
+      <div className="text-left text-white leading-relaxed space-y-4">
         <p className="text-base md:text-lg">
           Hey there! I&apos;m Atharva, an <span className="text-white font-semibold">Electrical Engineering</span> undergrad at{" "}
           <span className="text-white font-semibold">IIT Jodhpur</span> with a deep curiosity for technology and intelligent systems.
@@ -27,7 +27,7 @@ export default function Aboutme() {
           optimizing code for performance, or just experimenting with new tech stacks. When I&apos;m not coding, you&apos;ll
           probably find me reading mystery novels, exploring UI design ideas, or getting lost in a good technical rabbit hole.
         </p>
-        <p className="text-base md:text-lg text-gray-400 italic">
+        <p className="text-base md:text-lg text-white italic">
           Always learning, always building, and always curious — that&apos;s pretty much me in a nutshell.
         </p>
       </div>

@@ -13,7 +13,7 @@ const items = [
     description:
       "A full-fledged healthcare management platform with live ambulance tracking, digital queue tokens, doctor scheduling, admin dashboards, and referral support.",
     header: <Skeleton />,
-    icon: <Activity className="h-4 w-4 text-neutral-500" />,
+    icon: <Activity className="h-4 w-4 text-white" />,
     className: "md:col-span-2",
   },
   {
@@ -21,14 +21,14 @@ const items = [
     description:
       "AI-powered tool that generates structured test papers from topics using the Gemini API.",
     header: <Skeleton />,
-    icon: <FileText className="h-4 w-4 text-neutral-500" />,
+    icon: <FileText className="h-4 w-4 text-white" />,
     className: "md:col-span-1",
   },
   {
     title: "The Art of Design",
     description: "Discover the beauty of thoughtful and functional design.",
     header: <Skeleton />,
-    icon: <Pen className="h-4 w-4 text-neutral-500" />,
+    icon: <Pen className="h-4 w-4 text-white" />,
     className: "md:col-span-1",
   },
 ];
@@ -45,7 +45,7 @@ export default function Projects() {
         className="max-w-7xl mx-auto"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-          Some of my <span className="text-teal-400">Projects</span>
+          Some of my <span className="text-blue-500">Projects</span>
         </h2>
         <BentoGrid className="max-w-4xl mx-auto">
           {items.map((item, i) => (
