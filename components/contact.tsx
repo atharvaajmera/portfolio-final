@@ -34,10 +34,8 @@ export default function Contact() {
 
     return (
         <section className="min-h-screen bg-[#0b0b0b] py-20 flex flex-col items-center justify-center relative overflow-hidden">
-            {/* Three.js Background */}
             <ContactBackground />
 
-            {/* Subtle gradient overlay */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
                 <div className="absolute top-[15%] left-[20%] w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]" />
                 <div className="absolute bottom-[20%] right-[15%] w-96 h-96 bg-blue-400/5 rounded-full blur-[100px]" />
