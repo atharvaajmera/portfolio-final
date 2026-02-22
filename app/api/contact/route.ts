@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
+import { validate as validateEmail } from "email-validator";
 
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL!,
@@ -32,12 +33,23 @@ export async function POST(request: Request) {
   const { email, name, message, honeypot } = await request.json();
 
   if (honeypot) {
-    return NextResponse.json({ message: "Freezed for bot behaviour." }, { status: 400 });
+    return NextResponse.json(
+      { message: "Freezed for bot behaviour." },
+      { status: 400 },
+    );
   }
 
   if (!email || !name || !message) {
     return NextResponse.json(
       { message: "All fields are required" },
+      { status: 400 },
+    );
+  }
+
+  // Email validation using email-validator library
+  if (!validateEmail(email)) {
+    return NextResponse.json(
+      { message: "Invalid email address format" },
       { status: 400 },
     );
   }

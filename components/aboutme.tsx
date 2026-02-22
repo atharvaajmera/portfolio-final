@@ -17,7 +17,7 @@ export default function Aboutme() {
           I&apos;m a <span className="text-white font-semibold">Full-Stack Developer</span> driven by a simple habit: I love building things and I never stop being curious. My work is fueled by a constant urge to explore new tech stacks and see how different pieces of a system fit together.
         </p>
         <p className="text-base md:text-lg">
-          When I&apos;m not at my desk, I&apos;m usually swapping code for a different kind of immersion- whether that&apos;s getting lost in a book or diving into a game. For me, it&apos;s all about the thrill of the &quot;new,&quot; whether it&apos;s a fresh library, a complex story, or a challenging level.
+          When I&apos;m not at my desk, I&apos;m usually swapping code for a different kind of immersion - whether that&apos;s listening to songs or diving into a game. For me, it&apos;s all about the thrill of the &quot;new,&quot; whether it&apos;s a fresh playlist, discovering new artists, or a challenging level.
         </p>
       </div>
     </motion.div>

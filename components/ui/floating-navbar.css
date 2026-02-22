@@ -10,7 +10,8 @@
   background-color: rgba(10, 10, 10, 0.9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6),
+  box-shadow:
+    0px 4px 16px rgba(0, 0, 0, 0.6),
     0px 0px 0px 1px rgba(255, 255, 255, 0.05);
   z-index: 5000;
   padding: 0.75rem 2rem;
@@ -49,22 +50,25 @@
 }
 
 .floating-nav-link .icon {
-  display: block;
+  display: none;
 }
 
 .floating-nav-link .text {
-  display: none;
-  font-size: 0.875rem;
+  display: block;
+  font-size: 0.75rem;
   color: inherit;
 }
 
 @media (min-width: 640px) {
-  .floating-nav-link .icon {
-    display: none;
-  }
-
   .floating-nav-link .text {
-    display: block;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .floating-nav {
+    padding: 0.5rem 1rem;
+    gap: 1rem;
   }
 }
 

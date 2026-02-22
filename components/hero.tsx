@@ -36,8 +36,8 @@ export function HeroSection() {
       />
 
       <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pt-4 min-h-screen">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          <div className="flex flex-col justify-center space-y-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+          <div className="flex flex-col justify-center space-y-6 lg:space-y-8 pt-16 sm:pt-8 lg:pt-0">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-left tracking-tight">
               <span className="text-white"> Hi! I&apos;m</span>{" "}<br />
               <span className="text-blue-500">
@@ -60,7 +60,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center justify-center h-[500px]">
+          <div className="flex items-center justify-center h-[300px] sm:h-[350px] lg:h-[500px]">
             <InteractiveShape />
           </div>
         </div>

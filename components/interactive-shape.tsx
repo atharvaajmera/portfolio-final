@@ -137,7 +137,34 @@ export default function InteractiveShape() {
             };
         };
 
+        // Touch handlers for mobile
+        const handleTouchStart = (event: TouchEvent) => {
+            event.preventDefault();
+            const touch = event.touches[0];
+            mousePosition.current = {
+                x: (touch.clientX / window.innerWidth) * 2 - 1,
+                y: -(touch.clientY / window.innerHeight) * 2 + 1,
+            };
+        };
+
+        const handleTouchMove = (event: TouchEvent) => {
+            event.preventDefault();
+            const touch = event.touches[0];
+            mousePosition.current = {
+                x: (touch.clientX / window.innerWidth) * 2 - 1,
+                y: -(touch.clientY / window.innerHeight) * 2 + 1,
+            };
+        };
+
+        const handleTouchEnd = () => {
+            // Gradually reset position
+            mousePosition.current = { x: 0, y: 0 };
+        };
+
         window.addEventListener("mousemove", handleMouseMove);
+        renderer.domElement.addEventListener("touchstart", handleTouchStart, { passive: false });
+        renderer.domElement.addEventListener("touchmove", handleTouchMove, { passive: false });
+        renderer.domElement.addEventListener("touchend", handleTouchEnd);
 
         // Animation loop
         const clock = new THREE.Clock();
@@ -201,6 +228,9 @@ export default function InteractiveShape() {
         // Cleanup
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
+            renderer.domElement.removeEventListener("touchstart", handleTouchStart);
+            renderer.domElement.removeEventListener("touchmove", handleTouchMove);
+            renderer.domElement.removeEventListener("touchend", handleTouchEnd);
             window.removeEventListener("resize", handleResize);
             if (container && renderer.domElement.parentNode === container) {
                 container.removeChild(renderer.domElement);

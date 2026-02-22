@@ -7,6 +7,7 @@ export default function Mailer() {
     const [message, setMessage] = useState("");
     const [honeypot, setHoneypot] = useState("");
     const [isSent, setIsSent] = useState(false);
+    const [submittedName, setSubmittedName] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -30,6 +31,13 @@ export default function Mailer() {
             return;
         }
 
+        // Email validation regex
+        const emailRegex = /^[^\s@][^@]*@[^@]+\.[^@\s]{2,}$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
         setIsLoading(true);
 
         try {
@@ -42,6 +50,10 @@ export default function Mailer() {
             const data = await res.json();
 
             if (res.ok) {
+                setSubmittedName(name);
+                setEmail("");
+                setName("");
+                setMessage("");
                 setIsSent(true);
             } else if (res.status === 429) {
                 alert("Rate limit reached! Please wait a while before sending another message.");
@@ -54,10 +66,6 @@ export default function Mailer() {
         } finally {
             setIsLoading(false);
         }
-
-        setEmail("");
-        setName("");
-        setMessage("");
     };
 
     if (isSent) {
@@ -66,10 +74,13 @@ export default function Mailer() {
                 <CheckCircle2 className="w-16 h-16 text-blue-500 mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-white mb-6">
-                    Thanks for reaching out, {name}. I&apos;ll get back to you as soon as possible.
+                    Thanks for reaching out, {submittedName}. I&apos;ll get back to you as soon as possible.
                 </p>
                 <button
-                    onClick={() => setIsSent(false)}
+                    onClick={() => {
+                        setIsSent(false);
+                        setSubmittedName("");
+                    }}
                     className="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-white transition-colors"
                 >
                     Send Another Message

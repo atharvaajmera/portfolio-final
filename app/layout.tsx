@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,6 +13,59 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "Atharva - Full Stack Developer & Tech Enthusiast",
+  description: "Full-stack developer skilled in modern web technologies, GenAI, and building scalable applications. Explore my projects and get in touch.",
+  keywords: [
+    "Full Stack Developer",
+    "Web Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "GenAI",
+    "Tech Enthusiast",
+    "Software Engineer",
+    "Portfolio",
+  ],
+  authors: [{ name: "Atharva Ajmera" }],
+  creator: "Atharva Ajmera",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://atharva-portfolio.com",
+    title: "Atharva - Full Stack Developer & Tech Enthusiast",
+    description: "Full-stack developer skilled in modern web technologies, GenAI, and building scalable applications.",
+    siteName: "Atharva's Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Atharva - Full Stack Developer & Tech Enthusiast",
+    description: "Full-stack developer skilled in modern web technologies, GenAI, and building scalable applications.",
+    creator: "@atharvaajmera",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-site-verification-code",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
