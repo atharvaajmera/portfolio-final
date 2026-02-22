@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Atharva - Full Stack Developer & Tech Enthusiast",
+  title: "Atharva Ajmera - Full Stack Developer & Tech Enthusiast at IIT Jodhpur",
   description: "Full-stack developer skilled in modern web technologies, GenAI, and building scalable applications. Explore my projects and get in touch.",
   keywords: [
     "Full Stack Developer",
