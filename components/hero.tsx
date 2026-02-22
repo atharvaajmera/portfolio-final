@@ -48,7 +48,7 @@ export function HeroSection() {
             <div className="h-12 flex items-start">
               <span className="text-xl md:text-2xl text-white font-mono tracking-wide">
                 <Typewriter
-                  words={["Full Stack Developer", "Tech Enthusiast", "Machine Learning Explorer"]}
+                  words={["Full Stack Developer", "Tech Enthusiast", "GenAI Enthusiast"]}
                   loop={0}
                   cursor
                   cursorStyle="|"

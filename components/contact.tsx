@@ -18,17 +18,17 @@ export default function Contact() {
         {
             title: "GitHub",
             icon: <IconBrandGithub className="w-5 h-5" />,
-            href: "https://github.com/Atharva-3000",
+            href: "https://github.com/atharvaajmera",
         },
         {
             title: "LinkedIn",
             icon: <IconBrandLinkedin className="w-5 h-5" />,
-            href: "https://www.linkedin.com/in/atharva-pawar-56060625a/",
+            href: "https://www.linkedin.com/in/atharva-ajmera-790b10327/",
         },
         {
             title: "Email",
             icon: <IconMail className="w-5 h-5" />,
-            href: "mailto:atharvapawar2005@gmail.com",
+            href: "mailto:atharvaajmera06@gmail.com",
         },
     ];
 

@@ -14,21 +14,10 @@ export default function Aboutme() {
       </h2>
       <div className="text-left text-white leading-relaxed space-y-4">
         <p className="text-base md:text-lg">
-          Hey there! I&apos;m Atharva, an <span className="text-white font-semibold">Electrical Engineering</span> undergrad at{" "}
-          <span className="text-white font-semibold">IIT Jodhpur</span> with a deep curiosity for technology and intelligent systems.
+          I&apos;m a <span className="text-white font-semibold">Full-Stack Developer</span> driven by a simple habit: I love building things and I never stop being curious. My work is fueled by a constant urge to explore new tech stacks and see how different pieces of a system fit together.
         </p>
         <p className="text-base md:text-lg">
-          I love diving into <span className="text-white font-semibold">Machine Learning</span> and{" "}
-          <span className="text-white font-semibold">full-stack web development</span>, exploring how smart algorithms and thoughtful
-          design can come together to solve real problems.
-        </p>
-        <p className="text-base md:text-lg">
-          I&apos;m driven by the thrill of learning something new every day — whether that&apos;s understanding how models think,
-          optimizing code for performance, or just experimenting with new tech stacks. When I&apos;m not coding, you&apos;ll
-          probably find me reading mystery novels, exploring UI design ideas, or getting lost in a good technical rabbit hole.
-        </p>
-        <p className="text-base md:text-lg text-white italic">
-          Always learning, always building, and always curious — that&apos;s pretty much me in a nutshell.
+          When I&apos;m not at my desk, I&apos;m usually swapping code for a different kind of immersion- whether that&apos;s getting lost in a book or diving into a game. For me, it&apos;s all about the thrill of the &quot;new,&quot; whether it&apos;s a fresh library, a complex story, or a challenging level.
         </p>
       </div>
     </motion.div>
